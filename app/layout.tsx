@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Nav from "./navigation/nav";
 
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
             <Link href={"/about"}>About</Link>
           </ul>
         </nav>
+        <Nav />
         {children}
         {isAdmin && profile}
       </body>
